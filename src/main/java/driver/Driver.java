@@ -24,13 +24,13 @@ public class Driver {
 
         URL remoteUrl = null;
         try {
-            remoteUrl = new URL("http://127.0.0.1:4723/wd/hub");
+            remoteUrl = new URL("http://127.0.0.1:5723/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
 
         driver = new AndroidDriver(remoteUrl, desiredCapabilities);
-        driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     public static AndroidDriver<AndroidElement> getCurrentDriver(){

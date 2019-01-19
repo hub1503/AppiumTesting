@@ -44,6 +44,11 @@ public class SearchPage extends BasePage{
 
     }
 
+    public StockDetailPage gotoStockDetailPage(){
+        Driver.getCurrentDriver().findElements(By.id("stockName")).get(0).click();
+        return new StockDetailPage();
+    }
+
     public SearchPage removeSelected(){
         return this;
 
